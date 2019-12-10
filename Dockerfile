@@ -24,4 +24,4 @@ RUN pip3 install --upgrade --user awscli
 
 RUN pip3 install git+https://github.com/chanwit/kale
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT /entrypoint.sh
