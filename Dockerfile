@@ -1,4 +1,4 @@
-FROM python:3.8-alpine
+FROM python:3.6-alpine
 
 LABEL "com.github.actions.name"="eksctl-kale-cmd"
 LABEL "com.github.actions.description"="eksctl is a simple CLI tool for creating clusters on EKS"
