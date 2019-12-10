@@ -22,6 +22,10 @@ RUN apk add --update --no-cache curl openssl git gcc musl-dev libffi-dev libress
 
 RUN pip3 install --upgrade --user awscli
 
-RUN pip3 install git+https://github.com/chanwit/kale
+RUN pip3 install kfp --upgrade
+RUN pip3 install \
+	six \
+	dill==0.3.1.1 \
+	git+https://github.com/chanwit/kale
 
 ENTRYPOINT /entrypoint.sh
