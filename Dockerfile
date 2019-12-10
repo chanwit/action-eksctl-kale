@@ -21,7 +21,7 @@ RUN apk add --update --no-cache curl openssl git gcc musl-dev libffi-dev libress
     && chmod +x /entrypoint.sh
 
 RUN pip3 install awscli --upgrade
-RUN pip3 install kfp --upgrade
+RUN pip3 install kfp==0.1.31.1
 RUN pip3 install \
 	six \
 	dill==0.3.1.1 \
