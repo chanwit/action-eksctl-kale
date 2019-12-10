@@ -2,6 +2,12 @@
 name: 'EKSCtl Kale'
 description: 'EKSCtl Kale pipeline compiler for notebooks'
 inputs:
+  awsAccessKeyId:
+    description: 'awsAccessKeyId'
+    required: true
+  awsSecretAccessKey:
+    description: 'awsSecretAccessKey'
+    required: true
   region:
     description: 'AWS default region'
     required: false
@@ -11,6 +17,6 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   env:
-    AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-    AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    AWS_ACCESS_KEY_ID: ${{ inputs.awsAccessKeyId }}
+    AWS_SECRET_ACCESS_KEY: ${{ inputs.awsSecretAccessKey }}
     AWS_DEFAULT_REGION: ${{ inputs.region }}
