@@ -21,7 +21,7 @@ inputs:
 outputs: {}
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: chanwit/action-eksctl-kale:latest
   env:
     AWS_ACCESS_KEY_ID: ${{ inputs.awsAccessKeyId }}
     AWS_SECRET_ACCESS_KEY: ${{ inputs.awsSecretAccessKey }}

@@ -1,7 +1,7 @@
 FROM python:3.6-alpine
 
 LABEL "com.github.actions.name"="eksctl-kale-cmd"
-LABEL "com.github.actions.description"="eksctl is a simple CLI tool for creating clusters on EKS"
+LABEL "com.github.actions.description"="EKSctl and Kubeflow Kale"
 LABEL "com.github.actions.icon"="server"
 LABEL "com.github.actions.color"="blue"
 
