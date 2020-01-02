@@ -18,5 +18,5 @@ while [ "$PIPELINE_STATUS" == "Running" ]
 do
 	PIPELINE_STATUS=$(kubectl get workflow -n kubeflow -o jsonpath="{.items[?(@.spec.entrypoint=='${PIPELINE_NAME}')].status.phase}")
 	echo "Current status: ${PIPELINE_STATUS} ..."
-	sleep 2
+	sleep 10
 done
